@@ -1,0 +1,302 @@
+$primary-color: #ff6347;
+@font-face {
+    font-family: "SVN-Gilroy-Bold";
+    src: url("../assets/fonts/SVN-Gilroy-Bold.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "SVN-Gilroy-Medium";
+    src: url("../assets/fonts/SVN-Gilroy-Medium.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "SVN-Gilroy-Thin";
+    src: url("../assets/fonts/SVN-Gilroy-Thin.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+   //global css
+body{
+    width:100%;
+   height:100%;
+   clear:both;
+ margin:0;
+   padding:0;
+}
+main{
+   background:rgba(248,215,219,0.48);
+}
+.landingpage{
+    overflow:hidden;
+       clear:both;
+}
+.category{
+   padding:40px;
+   @media screen and (max-width: 768px) {
+    padding:20px;
+   }
+   .category__items{
+       .category__items--href{
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+           border-radius:10px;
+           margin-bottom:20px;
+           background:#fff;
+       }
+   }
+}
+.category__list--price {
+   display:flex;
+    flex-direction: column-reverse;
+}
+.category__items--list{
+           padding:10px;
+           h4{
+               font-family: "SVN-Gilroy-Medium", sans-serif;
+               color:#000;
+               display: -webkit-box;
+                 -webkit-line-clamp: 2; /* Giới hạn số dòng */
+                 -webkit-box-orient: vertical;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+           }
+           
+           .category__priceFinal{
+               color:#D70000;
+               font-family: "SVN-Gilroy-Medium", sans-serif;
+               font-weight:bold;
+           }
+   .category__priceOri{
+       display:flex;
+           align-items: center;
+   justify-content: flex-start;
+       p{
+           color:#000;
+           text-decoration: line-through;
+           padding-right:10px;
+           margin:0;
+           font-family: "SVN-Gilroy-Thin", sans-serif;
+       }
+       
+       span{
+         -webkit-animation: bounce 4s ease infinite alternate;
+           color:#fff;
+           background:#D70000;
+           padding:2px 4px;
+           border-radius:5px;
+           font-family: "SVN-Gilroy-Bold", sans-serif;
+       }
+       @-webkit-keyframes bounce {
+         0% {
+             text-shadow:
+                         0 5px 0 #ccc,
+                         0 2px 3px #D70000(0, 0, 0, 1);  
+         }
+         100% {
+           transform:translateY(1px);
+           
+         }
+       }
+       
+   }
+       }
+
+.category__items--image{
+      overflow:hidden;
+    padding-top:10px;
+    
+    width:100%;
+       img{
+           width:100%;
+           aspect-ratio: 2/2;
+           transition:all .5s linear;
+       }
+    &:hover img{
+        transform:scale(1.1)
+    }
+       
+   }
+.category__bottom{
+   padding-top:20px;
+}
+//footer
+.footer__items{
+   li{
+       list-style: none;
+    }
+}
+
+
+
+
+
+
+
+
+.landingpage{
+    //banner
+    .banner{
+        img{
+            width:100%;
+        }
+    }
+    //privilege
+    .categoryPrivilege{
+        .privilege__list--top{
+            width:50%;
+            margin:0 auto;
+            img{
+                width:100%;
+            }
+            @media screen and (max-width: 768px) {
+                width:80%;
+            }
+        }
+        
+        .privilege__list--own{
+            img{
+                width:100%;
+                transition: all .3s ease-in-out;
+            }
+            &:hover img{
+                transform:scale(1.1)
+            }
+        }
+    }
+    //block apple 
+    .category__top{
+         width:50%;
+         margin:0 auto;
+         @media screen and (max-width: 768px) {
+            width:80%;
+        }
+        img{
+            width:100%;
+        }
+    }
+    .categoryApple__flex--tabs{
+        width:50%;
+         margin:0 auto;
+        text-align:center;
+        padding:20px 0;
+        button{
+            padding:5px 10px;
+            margin-left: 5px;
+            border-radius:10px;
+            border:none;
+            background:#D70000;
+            color:#fff;
+            &.active__button{
+                border:2px dashed #fff;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            }
+           
+        }
+    }
+    .ant-spin{
+        width:100%;
+        text-align:center;
+    }
+    //footer
+    .footer{
+        padding:20px;
+          h4{
+                   font-family: "SVN-Gilroy-Bold", sans-serif;
+              font-size:16px;
+              margin:0px;
+            }
+        .footerTop{
+           
+            h5{
+                font-family: "SVN-Gilroy-Medium", sans-serif;
+                font-size:14px;
+                padding-left:10px;
+                margin:15px 0;
+            }
+            ul{
+                margin:0;
+                padding:0;
+                padding-left:10px;
+            li{
+                list-style: none;
+                font-family: "SVN-Gilroy-Medium", sans-serif;
+                font-size:14px;
+                line-height:1.5;
+            }
+            }
+        }
+        .footerMid{
+            padding-top:20px;
+            .footer__items{
+                ul{
+                    padding-left:0;
+                    li{
+                        font-family: "SVN-Gilroy-Medium", sans-serif;
+                        font-size:14px;
+                        line-height:1.5;
+                    }
+                }
+                
+            }
+            .footer__items--info{
+                    h5{
+                        font-family: "SVN-Gilroy-Medium", sans-serif;
+                        font-size:14px;
+                         line-height:1.5;
+                    }
+                .mg-top{
+                    a{
+                        color:#000;
+                        span{
+                            color:blue;
+                             font-family: "SVN-Gilroy-Bold", sans-serif !important;
+                            font-weight:bold;
+                        }
+                    }
+                    }
+                }
+            .footer__items--social {
+                 h5{
+                        font-family: "SVN-Gilroy-Medium", sans-serif;
+                        font-size:14px;
+                         line-height:1.5;
+                    }
+                .footer__items--channel{
+                    img{
+                        width:30px;
+                        padding-right:5px;
+                    }
+                }
+                .footer__items--website{
+                display:flex;
+                    flex-flow:row wrap;
+                    img{
+                         width:30%;
+                        padding-right:10px;
+                            padding-bottom:10px;
+                        
+                    }
+                   
+                }
+                .footer__items-method{
+                    img{
+                         width:20%;
+                        padding-right:10px;
+                            padding-bottom:10px;
+                        
+                    }
+                }
+                .footer__items-declare{
+                    img{
+                         width:50%;
+                       
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}
