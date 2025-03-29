@@ -1,4 +1,4 @@
-"use client";
+"use client"; // ✅ Bắt buộc vì React Query cần chạy trong Client Component
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode, useState } from "react";
