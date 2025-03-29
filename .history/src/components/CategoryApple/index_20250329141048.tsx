@@ -127,7 +127,7 @@ export default function CategoryApple() {
                                 {item?.product?.price_range?.minimum_price.final_price.value.toLocaleString(
                                   "vi-VN"
                                 )}{" "}
-                                &nbsp;VND
+                                &nbsp; VND
                               </span>
                             </div>
                           </div>

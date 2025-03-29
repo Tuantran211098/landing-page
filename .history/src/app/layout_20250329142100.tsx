@@ -6,9 +6,6 @@ export const metadata = {
   description:
     "Công ty BẠCH LONG MOBILE chuyên cung cấp sản phẩm chất lượng cao.",
   keywords: "công ty BẠCH LONG MOBILE, sản phẩm chất lượng, thương mại điện tử",
-  icons: {
-    icon: "https://bachlongmobile.com/assets/images/logo/logo-website-1.png",
-  },
   openGraph: {
     title: "Trang chủ | BẠCH LONG MOBILE",
     description:

@@ -34,7 +34,7 @@ export default function CategoryApple() {
     );
 
     if (!original || !final) return "N/A";
-    return -Math.ceil(((Number(original) - Number(final)) / original) * 100);
+    return Math.ceil(((Number(original) - Number(final)) / original) * 100);
   };
   return (
     <section className="category categoryApple">
@@ -93,7 +93,7 @@ export default function CategoryApple() {
                             alt={`${item?.product?.name}`}
                             fill
                           />
-                          <div className="category__items--promotion">
+                          <div className="categoryApple__items--promotion">
                             <Image
                               src={`https://bachlongmobile.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FappleDealCuoiThang.02fae6ff.png&w=1080&q=100`}
                               alt={`${item?.product?.name}`}
@@ -111,7 +111,6 @@ export default function CategoryApple() {
                                 {Number(item?.price_original).toLocaleString(
                                   "vi-VN"
                                 )}
-                                &nbsp;VND
                               </p>
                               <span className="category__priceFinal--percent categoryApple__priceFinal--percent">
                                 {percentage(
@@ -126,8 +125,7 @@ export default function CategoryApple() {
                               <span className="">
                                 {item?.product?.price_range?.minimum_price.final_price.value.toLocaleString(
                                   "vi-VN"
-                                )}{" "}
-                                &nbsp;VND
+                                )}
                               </span>
                             </div>
                           </div>

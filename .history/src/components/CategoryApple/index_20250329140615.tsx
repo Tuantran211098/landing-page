@@ -34,7 +34,7 @@ export default function CategoryApple() {
     );
 
     if (!original || !final) return "N/A";
-    return -Math.ceil(((Number(original) - Number(final)) / original) * 100);
+    return Math.ceil(((Number(original) - Number(final)) / original) * 100);
   };
   return (
     <section className="category categoryApple">
@@ -111,7 +111,6 @@ export default function CategoryApple() {
                                 {Number(item?.price_original).toLocaleString(
                                   "vi-VN"
                                 )}
-                                &nbsp;VND
                               </p>
                               <span className="category__priceFinal--percent categoryApple__priceFinal--percent">
                                 {percentage(
@@ -126,8 +125,7 @@ export default function CategoryApple() {
                               <span className="">
                                 {item?.product?.price_range?.minimum_price.final_price.value.toLocaleString(
                                   "vi-VN"
-                                )}{" "}
-                                &nbsp;VND
+                                )}
                               </span>
                             </div>
                           </div>

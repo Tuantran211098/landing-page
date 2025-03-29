@@ -1,12 +1,11 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import { getCateSamsung } from "@/lib/graphqlClient";
-
+import { getCateAndroid } from "@/lib/graphqlClient";
 import { useEffect, useRef } from "react";
 import { Row, Col } from "antd";
 import Image from "next/image";
-export default function CategorySamsung() {
+export default function CategoryAndroid() {
   //////This block just use animated when user scroll down and add class
   const elementsRef = useRef<(HTMLDivElement | null)[]>([]); // Mảng ref
 
@@ -36,15 +35,15 @@ export default function CategorySamsung() {
 
   //////This block just call API
   const {
-    data: CateSamsung,
+    data: CateAndroid,
     isLoading,
     error,
   } = useQuery({
-    queryKey: ["cateSamsung"],
-    queryFn: getCateSamsung,
+    queryKey: ["cateAndroid"],
+    queryFn: getCateAndroid,
     // enabled: activeTab === "iphone",
   });
-  console.log("CateSamsung", CateSamsung);
+  console.log("CateAndroid", CateAndroid);
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {(error as Error).message}</p>;
@@ -59,16 +58,16 @@ export default function CategorySamsung() {
     );
 
     if (!original || !final) return "N/A";
-    return -Math.ceil(((Number(original) - Number(final)) / original) * 100);
+    return Math.ceil(((Number(original) - Number(final)) / original) * 100);
   };
   return (
-    <section className="category categorySamsung">
+    <section className="category categoryAndroid">
       <div className="category__container categorySamsung__container">
         <div className="category__top categorySamsung__top">
-          <Image
-            src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/sam555555555555.png"
-            alt="Samsung"
-            fill
+          <img
+            src="https://beta-api.bachlongmobile.com/media/MageINIC/bannerslider/and555555555555555.png"
+            alt="privilege-1"
+            width="auto"
           />
         </div>
         <div className="category__bottom categorySamsung__bottom">
@@ -76,7 +75,7 @@ export default function CategorySamsung() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 24 }}
             className="category__flex--items categorySamsung__flex--items"
           >
-            {(CateSamsung as any).DailySales?.items?.[0]?.items?.map(
+            {(CateAndroid as any).DailySales?.items?.[0]?.items?.map(
               (item: any, index: any) => (
                 <Col
                   xs={24}
@@ -98,7 +97,7 @@ export default function CategorySamsung() {
                         />
                         <div className="category__items--promotion">
                           <Image
-                            src={`https://bachlongmobile.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FsamsungDealCuoiThang.1298cb67.png&w=1080&q=100`}
+                            src={`https://bachlongmobile.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2FappleDealCuoiThang.02fae6ff.png&w=1080&q=100`}
                             alt={`${item?.product?.name}`}
                             fill
                           />
@@ -115,9 +114,8 @@ export default function CategorySamsung() {
                               {Number(item?.price_original).toLocaleString(
                                 "vi-VN"
                               )}
-                              &nbsp;VND
                             </p>
-                            <span className="category__priceFinal--percent categorySamsung__priceFinal--percent">
+                            <span className="category__priceFinal--percent categoryAndroid__priceFinal--percent">
                               {percentage(
                                 item?.price_original ?? 0,
                                 item?.product?.price_range?.minimum_price
@@ -131,7 +129,6 @@ export default function CategorySamsung() {
                               {item?.product?.price_range?.minimum_price.final_price.value.toLocaleString(
                                 "vi-VN"
                               )}
-                              &nbsp;VND
                             </span>
                           </div>
                         </div>

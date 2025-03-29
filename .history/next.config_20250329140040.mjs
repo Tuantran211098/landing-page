@@ -3,11 +3,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "beta-api.bachlongmobile.com",
-            },
-            {
-                protocol: "https",
-                hostname: "bachlongmobile.com",
+                hostname: ["beta-api.bachlongmobile.com", "https://bachlongmobile.com"],
             },
         ],
     },

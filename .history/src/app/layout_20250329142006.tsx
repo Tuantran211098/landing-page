@@ -1,14 +1,12 @@
 import { ReactNode } from "react";
 import QueryProvider from "@/components/QueryProvider";
+import Head from "next/head";
 
 export const metadata = {
   title: "Trang chủ | BẠCH LONG MOBILE",
   description:
     "Công ty BẠCH LONG MOBILE chuyên cung cấp sản phẩm chất lượng cao.",
   keywords: "công ty BẠCH LONG MOBILE, sản phẩm chất lượng, thương mại điện tử",
-  icons: {
-    icon: "https://bachlongmobile.com/assets/images/logo/logo-website-1.png",
-  },
   openGraph: {
     title: "Trang chủ | BẠCH LONG MOBILE",
     description:
@@ -39,6 +37,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="vi">
+      <Head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="https://bachlongmobile.com/assets/images/logo/logo-website-1.png"
+        />
+      </Head>
       <body>
         <QueryProvider>{children}</QueryProvider>{" "}
       </body>

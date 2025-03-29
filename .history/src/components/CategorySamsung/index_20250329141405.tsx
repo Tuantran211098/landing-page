@@ -59,7 +59,7 @@ export default function CategorySamsung() {
     );
 
     if (!original || !final) return "N/A";
-    return -Math.ceil(((Number(original) - Number(final)) / original) * 100);
+    return Math.ceil(((Number(original) - Number(final)) / original) * 100);
   };
   return (
     <section className="category categorySamsung">
@@ -115,7 +115,6 @@ export default function CategorySamsung() {
                               {Number(item?.price_original).toLocaleString(
                                 "vi-VN"
                               )}
-                              &nbsp;VND
                             </p>
                             <span className="category__priceFinal--percent categorySamsung__priceFinal--percent">
                               {percentage(
@@ -131,7 +130,6 @@ export default function CategorySamsung() {
                               {item?.product?.price_range?.minimum_price.final_price.value.toLocaleString(
                                 "vi-VN"
                               )}
-                              &nbsp;VND
                             </span>
                           </div>
                         </div>
